@@ -48,3 +48,6 @@ select replicate('AA',2)
 
 --funcion para dar la vuelta a un string
 select reverse('aloH');
+
+--funcion para cortar desde un punto específico y sustituir
+select stuff('Hola a todos',3 ,5, 'Amigos');
