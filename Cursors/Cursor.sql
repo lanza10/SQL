@@ -3,11 +3,11 @@
 
 --TIPOS:
 --			-Solo lectura			-De actualización		-De inserción		-De combinación
-
+select * from DimProduct;
 create table products (
 	id int primary key,
 	name varchar(70),
-	price numeric
+	price money
 );
 insert into products (id, name, price)
 select Productkey, EnglishProductname, StandardCost from DimProduct
@@ -15,7 +15,7 @@ Where StandardCost Is Not NULL;
 
 select * from products;
 
-DECLARE @description NUMERIC;
+DECLARE @description money;
 
 DECLARE prod_info CURSOR FOR
 SELECT price FROM products;
