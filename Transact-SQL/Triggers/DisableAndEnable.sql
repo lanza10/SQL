@@ -36,5 +36,9 @@ select * from control_prod;
 alter table idProds
 enable trigger t_blockinsert_products;
 
+insert into idProds values(1);
+select * from idProds;
+select * from control_prod;
+
 drop trigger t_blockinsert_products;
 drop table idProds, control_prod;
